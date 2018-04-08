@@ -10,7 +10,10 @@
 <body>
   <div id="panelCt"></div>
   <script type="text/javascript">
+
+
   Ext.onReady(function () {
+  //  $(document).ready(function() {
 
     Ext.create('widget.panel', {
             renderTo:'panelCt',
@@ -19,11 +22,16 @@
             height:300,
             frame:true, //borda
 
+
             html:"<div id='contentID'></div>"
         });
+        //carregamento
+        $('#contentID').load('content.html');
 
 
   });
+
+
   </script>
 </body>
 </html>
