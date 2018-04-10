@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>Aula 08 - Alias e Xtype </title>
+  <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+  <script type="text/javascript" src="../extjs/ext-all.js"></script>
+</head>
+<body></body>
+  <script type="text/javascript">
+
+  Ext.define('Aula08.componente.MeuBotao',{
+      extend:'Ext.button.Button',
+
+      alias:'widget.meubotao',
+
+      initComponent:function(){
+          this.text = 'Meu Botao';
+          this.callParent();
+      }
+
+  });
+
+  Ext.define('Aula08.componente.Grid', {
+      extend:'Ext.grid.property.Grid',
+      alias:'widget.grid',
+      width: 300,
+      source: {
+          "(name)": "My Object",
+          "Created": Ext.Date.parse('10/15/2006', 'm/d/Y'),
+          "Available": false,
+          "Version": .01,
+          "Description": "A test object"
+      }
+  });
+
+  Ext.onReady(function() {
+
+    /*Ext.widget('grid',{
+        title: 'Properties Grid',
+        renderTo: Ext.getBody(),
+    });*/
+
+    Ext.create('Ext.window.Window', {
+        title: 'Hello',
+        height: 200,
+        width: 400,
+
+        items: {  // Let's put an empty grid in just to illustrate fit layout
+            xtype: 'grid',
+        }
+
+
+    }).show();
+
+
+  });
+  </script>
+
+
+</html>
