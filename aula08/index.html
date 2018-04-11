@@ -20,7 +20,7 @@
       }
 
   });
-
+  //Gid com alias
   Ext.define('Aula08.componente.Grid', {
       extend:'Ext.grid.property.Grid',
       alias:'widget.grid',
@@ -36,7 +36,8 @@
 
   Ext.onReady(function() {
 
-    /*Ext.widget('grid',{
+    /* ao descomentar vai aparecer no corpo do html
+    Ext.widget('grid',{
         title: 'Properties Grid',
         renderTo: Ext.getBody(),
     });*/
@@ -53,6 +54,19 @@
 
     }).show();
 
+    /*Loiane
+    Ext.create('Ext.window.Window', {
+        title: 'Hello',
+        height: 200,
+        width: 400,
+
+        items: {  // Let's put an empty grid in just to illustrate fit layout
+            xtype: 'button',
+        }
+
+
+    }).show();
+    */
 
   });
   </script>
